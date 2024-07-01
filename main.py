@@ -15,7 +15,12 @@ def encrypt(text, shift):
     encrypted_text = ""
     for letter in text:
         original_index = alphabet.index(letter)
-        encrypted_text += alphabet[original_index + 5]
+        if original_index + shift < len(alphabet):
+            encrypted_text += alphabet[original_index + shift]
+        else:
+            encrypted_text += alphabet[(original_index + shift) - len(alphabet)]
+
+    print(encrypted_text)
 
     ##HINT: How do you get the index of an item in a list:
     #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
