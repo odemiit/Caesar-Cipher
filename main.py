@@ -20,7 +20,7 @@ def encrypt(text, shift):
         else:
             encrypted_text += alphabet[(original_index + shift) - len(alphabet)]
 
-    print(encrypted_text)
+    print(f"The encoded text is {encrypted_text}")
 
     ##HINT: How do you get the index of an item in a list:
     #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
