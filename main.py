@@ -28,32 +28,33 @@ def caesar(sample_text, shift_amount, direction):
     
     
 
-def encrypt(plain_text, shift_amount):
-    encrypted_text = ""
-    for letter in plain_text:
-        original_index = alphabet.index(letter)
-        if original_index + shift_amount < len(alphabet):
-            encrypted_text += alphabet[original_index + shift_amount]
-        else:
-            encrypted_text += alphabet[(original_index + shift_amount) - len(alphabet)]
+# def encrypt(plain_text, shift_amount):
+#     encrypted_text = ""
+#     for letter in plain_text:
+#         original_index = alphabet.index(letter)
+#         if original_index + shift_amount < len(alphabet):
+#             encrypted_text += alphabet[original_index + shift_amount]
+#         else:
+#             encrypted_text += alphabet[(original_index + shift_amount) - len(alphabet)]
 
-    print(f"The encoded text is {encrypted_text}")
+#     print(f"The encoded text is {encrypted_text}")
 
-def decrypt(cipher_text, shift_amount):
-    decrypted_text = ""
-    for letter in cipher_text:
-        original_index = alphabet.index(letter)
-        if original_index - shift_amount >= 0:
-            decrypted_text += alphabet[original_index - shift_amount]
-        else:
-            decrypted_text += alphabet[(original_index - shift_amount) + len(alphabet)]
+# def decrypt(cipher_text, shift_amount):
+#     decrypted_text = ""
+#     for letter in cipher_text:
+#         original_index = alphabet.index(letter)
+#         if original_index - shift_amount >= 0:
+#             decrypted_text += alphabet[original_index - shift_amount]
+#         else:
+#             decrypted_text += alphabet[(original_index - shift_amount) + len(alphabet)]
 
-    print(f"The decoded text is {decrypted_text}")
+#     print(f"The decoded text is {decrypted_text}")
 
 #Call the correct function based on what "direction" the user inputs
-if direction == "encode":
-    encrypt(text, shift)
-elif direction == "decode":
-    decrypt(text, shift)
+# if direction == "encode":
+#     encrypt(text, shift)
+# elif direction == "decode":
+#     decrypt(text, shift)
 
 #TODO-2: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
+caesar(text, shift, direction)
