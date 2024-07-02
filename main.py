@@ -16,9 +16,9 @@ def encrypt(plain_text, shift_amount):
     print(f"The encoded text is {encrypted_text}")
 
 #TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
-def decrypt(plain_text, shift_amount):
+def decrypt(cipher_text, shift_amount):
     decrypted_text = ""
-    for letter in plain_text:
+    for letter in cipher_text:
         original_index = alphabet.index(letter)
         if original_index - shift_amount >= 0:
             decrypted_text += alphabet[original_index - shift_amount]
