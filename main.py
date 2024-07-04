@@ -40,6 +40,9 @@ while restart is True:
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
 
+    shift = shift % len(alphabet)
+    #print(shift)
+
     caesar(text, shift, direction)
     
     restart_answer = input("Do you want to restart the caesar cipher program? Type 'yes' or 'no'\n").lower()
