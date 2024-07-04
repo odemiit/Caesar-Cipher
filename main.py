@@ -13,9 +13,14 @@ def caesar(sample_text, shift_amount, direction):
         #e.g. start_text = "meet me at 3"
         #end_text = "•••• •• •• 3"
         original_index = alphabet.index(letter)
-        final_text += alphabet[original_index + shift_amount]
+        #final_text += alphabet[original_index + shift_amount]
+
+        if original_index + shift_amount < len(alphabet):
+            final_text += alphabet[original_index + shift_amount]
+        else:
+            final_text += alphabet[(original_index + shift_amount) - len(alphabet)]
         
-    print(f"Here's the {cipher_direction}d result: {end_text}")
+    print(f"Here's the {direction}d result: {final_text}")
 
 #TODO-1: Import and print the logo from art.py when the program starts.
 print(logo)
